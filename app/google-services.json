@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "17708474559",
+    "project_id": "liber-f19cd",
+    "storage_bucket": "liber-f19cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17708474559:android:cae4499fc47c241e16a60a",
+        "android_client_info": {
+          "package_name": "com.example.liber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "17708474559-7fau0j4a43f8lm0u3o8js8bk3qe20fe9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIiIJr6shrTrPuJaCgofHiJIvb0mCJpAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "17708474559-7fau0j4a43f8lm0u3o8js8bk3qe20fe9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

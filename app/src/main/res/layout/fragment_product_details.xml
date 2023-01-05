@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:id="@+id/nested_scroll_view"
+    android:background="@color/dark_gray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:src="@drawable/test_image"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/gradient_image_game_detail"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardProductImages"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardElevation="0dp">
+            
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpagerProductsImages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/imageClose"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_close"
+                android:padding="5dp"
+                app:tint="@color/g_black"/>
+            
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearTitlePrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/cardProductImages"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/tv_game_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                style="@style/h3"
+                android:textStyle="bold"
+                android:text="The name of the game"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/tv_game_star"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_star"
+                android:tint="@color/golden"
+                app:layout_constraintEnd_toStartOf="@id/tv_game_rating"
+                app:layout_constraintTop_toTopOf="@id/tv_game_rating"
+                app:layout_constraintBottom_toBottomOf="@id/tv_game_rating"
+                />
+
+            <TextView
+                android:id="@+id/tv_game_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="5"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:ellipsize="end"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_game_date_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h3"
+            android:textColor="#9E9E9E"
+            android:text="@string/release_date"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/linearTitlePrice"
+            app:layout_constraintStart_toStartOf="@id/linearTitlePrice"/>
+
+        <TextView
+            android:id="@+id/tv_total_ratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h4"
+            android:layout_marginEnd="10dp"
+            android:textColor="#9E9E9E"
+            android:text="@string/total_ratings"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearTitlePrice"/>
+        
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/g_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_game_date_release"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/linearProductPreferences"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/line"
+            app:layout_constraintEnd_toEndOf="@id/line"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvProductPlatform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/h3"
+                    android:textColor="@color/white"
+                    android:text="Platform"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlatforms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.apachat.loadingbutton.core.customViews.CircularProgressButton
+            android:id="@+id/button_add_to_my_list"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/mediumButtonHeight"
+            style="@style/goldenButtonStyle"
+            app:layout_constraintTop_toBottomOf="@id/linearProductPreferences"
+            app:layout_constraintStart_toStartOf="@id/linearProductPreferences"
+            app:layout_constraintEnd_toEndOf="@id/linearProductPreferences"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="20dp"
+            android:text="Add to My list"
+            app:spinning_bar_color="@color/white"/>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

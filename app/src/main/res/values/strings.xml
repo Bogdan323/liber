@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">liber</string>
+    <string name="rightAddress">The Right Address\nFor Shopping\nAnyday</string>
+    <string name="quality">it is now very easy to reach the\nbest quality among the\nproducts on the internet!</string>
+    <string name="game_release_date">Released: %s</string>
+    <string name="release_date">Release date: %s</string>
+    <string name="total_ratings">Total ratings: %s</string>
+</resources>

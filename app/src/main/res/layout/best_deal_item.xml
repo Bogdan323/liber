@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/g_card_background"
+    android:elevation="0dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp">
+
+        <ImageView
+            android:id="@+id/imageBestDeal"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/test_image" />
+
+        <TextView
+            android:id="@+id/tvBestDealName"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Scotch Premium"
+            app:layout_constraintStart_toEndOf="@id/imageBestDeal"
+            app:layout_constraintTop_toTopOf="@id/imageBestDeal"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="11dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="9sp"/>
+
+        <TextView
+            android:id="@+id/tvBestDealPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$2000"
+            app:layout_constraintTop_toBottomOf="@id/tvBestDealName"
+            app:layout_constraintStart_toEndOf="@id/tvNewBestDealPrice"
+            android:textColor="@color/g_hint"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginStart="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tvNewBestDealPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$1600"
+            app:layout_constraintStart_toStartOf="@id/tvBestDealName"
+            app:layout_constraintTop_toBottomOf="@id/tvBestDealName"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <com.apachat.loadingbutton.core.customViews.CircularProgressButton
+            android:id="@+id/buttonSeeProduct"
+            android:layout_width="83dp"
+            android:layout_height="28dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Product"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvBestDealName"
+            app:layout_constraintTop_toTopOf="@id/tvBestDealName"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="20dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

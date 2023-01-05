@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/stepview_mark"
+    app:cardCornerRadius="10dp"
+    android:elevation="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp">
+
+    <TextView
+        android:id="@+id/tvPlatformName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/h2"
+        android:text="Windows"
+        android:textSize="12sp"
+        android:textColor="@color/g_white"
+        android:fontFamily="@font/montserrat_semibold"
+        android:padding="6dp"/>
+
+</com.google.android.material.card.MaterialCardView>
