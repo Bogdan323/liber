@@ -9,8 +9,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.liber.R
 import com.example.liber.databinding.FragmentMainCategoryBinding
 import com.example.liber.presentation.fragments.maincontent.homefragment.HomeFragmentDirections
-import com.example.liber.presentation.fragments.maincontent.homefragment.categories.adapters.AllGamesPagedListAdapter
-import com.example.liber.presentation.viewmodels.MainCategoryViewModel
 import com.example.liber.common.showBottomNavigationView
 import com.example.liber.common.viewBinding
 import dagger.hilt.android.AndroidEntryPoint

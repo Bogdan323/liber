@@ -28,9 +28,9 @@
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
-        android:name="com.example.liber.presentation.fragments.maincontent.CartFragment"
+        android:name="com.example.liber.presentation.fragments.maincontent.SavedGamesFragment"
         android:label="CartFragment"
-        tools:layout="@layout/fragment_cart">
+        tools:layout="@layout/fragment_saved_games">
         <action
             android:id="@+id/action_cartFragment_to_productDetailsFragment"
             app:destination="@id/gameDetailsFragment" />

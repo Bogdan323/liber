@@ -17,7 +17,6 @@ import com.example.liber.databinding.FragmentProductDetailsBinding
 import com.example.liber.common.Resource
 import com.example.liber.common.hideBottomNavigationView
 import com.example.liber.common.viewBinding
-import com.example.liber.presentation.viewmodels.DetailsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 
@@ -45,7 +44,7 @@ class GameDetailsFragment : Fragment(R.layout.fragment_product_details){
         }
 
         lifecycleScope.launchWhenStarted {
-            viewModel.addToCard.collectLatest {
+            viewModel.addToSavedGames.collectLatest {
                 when(it) {
                     is Resource.Loading -> {
                         binding.buttonAddToMyList.startAnimation()

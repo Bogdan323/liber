@@ -11,8 +11,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.liber.R
 import com.example.liber.databinding.FragmentSearchBinding
-import com.example.liber.presentation.fragments.maincontent.searchgamesfragment.adapters.SearchGamesPagedListAdapter
-import com.example.liber.presentation.viewmodels.SearchGamesViewModel
 import com.example.liber.common.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 

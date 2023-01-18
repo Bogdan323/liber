@@ -1,6 +1,6 @@
 package com.example.liber.common.firebase
 
-import com.example.liber.domain.usermodel.CartProduct
+import com.example.liber.domain.usermodel.SavedGames
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -13,10 +13,10 @@ class FirebaseCommon(
         .document(auth.uid!!)
         .collection("cart")
 
-    fun addProductToCart(cartProduct: CartProduct, onResult: (CartProduct?, Exception?) -> Unit) {
-        cartCollection.document().set(cartProduct)
+    fun addProductToCart(savedGames: SavedGames, onResult: (SavedGames?, Exception?) -> Unit) {
+        cartCollection.document().set(savedGames)
             .addOnSuccessListener {
-                onResult(cartProduct, null)
+                onResult(savedGames, null)
             }
             .addOnFailureListener {
                 onResult(null, it)
@@ -27,7 +27,7 @@ class FirebaseCommon(
         firestore.runTransaction { transition ->
             val documentRef = cartCollection.document(documentId)
             val document = transition.get(documentRef)
-            val productObject = document.toObject(CartProduct::class.java)
+            val productObject = document.toObject(SavedGames::class.java)
             productObject?.let { cartProduct ->
                 val newQuantity = cartProduct.quantity + 1
                 val newProductObject = cartProduct.copy(quantity = newQuantity)

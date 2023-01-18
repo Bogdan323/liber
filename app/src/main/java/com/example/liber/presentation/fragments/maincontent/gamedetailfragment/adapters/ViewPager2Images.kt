@@ -13,10 +13,13 @@ class ViewPager2Images : ListAdapter<ShortScreenshot, ViewPager2Images.ImagesVie
 
     companion object {
         val diff = object : DiffUtil.ItemCallback<ShortScreenshot>() {
-            override fun areItemsTheSame(oldItem: ShortScreenshot, newItem: ShortScreenshot)
-                = oldItem::class == newItem::class
-            override fun areContentsTheSame(oldItem: ShortScreenshot, newItem: ShortScreenshot)
-                = oldItem == newItem
+            override fun areItemsTheSame(
+                oldItem: ShortScreenshot,
+                newItem: ShortScreenshot) = oldItem::class == newItem::class
+
+            override fun areContentsTheSame(
+                oldItem: ShortScreenshot,
+                newItem: ShortScreenshot) = oldItem == newItem
         }
     }
 

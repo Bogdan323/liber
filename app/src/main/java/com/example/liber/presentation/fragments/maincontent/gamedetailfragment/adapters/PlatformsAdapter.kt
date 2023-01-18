@@ -13,8 +13,13 @@ class PlatformsAdapter : ListAdapter<ParentPlatform, PlatformsAdapter.PlatformVi
 
     companion object {
         val diff = object : DiffUtil.ItemCallback<ParentPlatform>() {
-            override fun areItemsTheSame(oldItem: ParentPlatform, newItem: ParentPlatform) = oldItem::class == newItem::class
-            override fun areContentsTheSame(oldItem: ParentPlatform, newItem: ParentPlatform) = oldItem.platform.id == newItem.platform.id
+            override fun areItemsTheSame(
+                oldItem: ParentPlatform,
+                newItem: ParentPlatform) = oldItem::class == newItem::class
+
+            override fun areContentsTheSame(
+                oldItem: ParentPlatform,
+                newItem: ParentPlatform) = oldItem.platform.id == newItem.platform.id
         }
     }
 

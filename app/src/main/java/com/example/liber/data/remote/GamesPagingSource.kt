@@ -13,9 +13,6 @@ import javax.inject.Inject
 class GamesPagingSource @Inject constructor(private val api: GamesApi) : PagingSource<Int, Game>() {
 
     override fun getRefreshKey(state: PagingState<Int, Game>): Int? {
-//        return state.anchorPosition?.let {
-//            state.closestItemToPosition(it)?.id
-//        }
         return state.anchorPosition?.let { anchorPosition ->
             state.closestPageToPosition(anchorPosition)?.prevKey?.plus(1)
                 ?: state.closestPageToPosition(anchorPosition)?.nextKey?.minus(1)

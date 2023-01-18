@@ -5,10 +5,9 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.liber.R
-import com.example.liber.presentation.fragments.maincontent.homefragment.categories.adapters.HomeViewpagerAdapter
 import com.example.liber.databinding.FragmentHomeBinding
 import com.example.liber.presentation.fragments.maincontent.homefragment.categories.maincategoryfragment.MainCategoryFragment
-import com.example.liber.presentation.fragments.maincontent.homefragment.categories.PsGamesFragment
+import com.example.liber.presentation.fragments.maincontent.homefragment.categories.psgamesfragment.PsGamesFragment
 import com.example.liber.common.viewBinding
 import com.google.android.material.tabs.TabLayoutMediator
 

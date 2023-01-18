@@ -7,5 +7,4 @@ import com.example.liber.common.viewBinding
 
 class ProfileFragment: Fragment(R.layout.fragment_profile) {
     private val binding by viewBinding(FragmentProfileBinding::bind)
-
 }

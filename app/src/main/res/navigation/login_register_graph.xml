@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/introductionFragment"
-        android:name="com.example.liber.presentation.fragments.login.IntroductionFragment"
+        android:name="com.example.liber.presentation.fragments.login.introductionfragment.IntroductionFragment"
         android:label="IntroductionFragment"
         tools:layout="@layout/fragment_introduction">
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.liber.presentation.fragments.login.LoginFragment"
+        android:name="com.example.liber.presentation.fragments.login.loginfragment.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginOptionsFragment"
-        android:name="com.example.liber.presentation.fragments.login.LoginOptionsFragment"
+        android:name="com.example.liber.presentation.fragments.login.loginorregisterfragment.LoginOptionsFragment"
         android:label="LoginOptionsFragment"
         tools:layout="@layout/fragment_login_options">
         <action

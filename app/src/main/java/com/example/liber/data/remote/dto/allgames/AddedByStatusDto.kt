@@ -1,6 +1,5 @@
 package com.example.liber.data.remote.dto.allgames
 
-
 import com.example.liber.domain.model.AddedByStatus
 import com.google.gson.annotations.SerializedName
 

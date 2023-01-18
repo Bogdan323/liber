@@ -1,6 +1,5 @@
 package com.example.liber.presentation.fragments.login.dialog
 
-import android.view.View
 import android.widget.EditText
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
