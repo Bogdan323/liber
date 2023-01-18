@@ -27,7 +27,6 @@ android {
     }
 
     buildFeatures {
-        dataBinding true
         viewBinding true
     }
 
@@ -48,7 +47,6 @@ android {
 
 dependencies {
 
-    implementation 'com.google.firebase:firebase-firestore-ktx:24.4.1'
     def nav_version = "2.5.3"
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
@@ -65,14 +63,13 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
     def lifecycle_version = "2.5.1"
-    def arch_version = "2.1.0"
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
     // LiveData
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
 
-    def coroutine_version = "1.6.4"
     //Coroutines
+    def coroutine_version = "1.6.4"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
 
@@ -86,7 +83,6 @@ dependencies {
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
 
     //loading button
-//    implementation 'br.com.simplepass:loading-button-android:2.2.0'
     implementation group: 'com.apachat', name: 'loadingbutton-android', version: '1.0.11'
 
     //Circle imageview
@@ -94,7 +90,6 @@ dependencies {
 
     //Viewpager2
     implementation("androidx.viewpager2:viewpager2:1.0.0")
-//    implementation 'io.github.vejei.viewpagerindicator:viewpagerindicator:1.0.0-alpha.1'
 
     //Stepview
     implementation 'com.github.shuhart:stepview:1.5.1'
@@ -122,4 +117,5 @@ dependencies {
 
     //Firebase
     implementation 'com.google.firebase:firebase-auth:21.1.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.4.1'
 }
